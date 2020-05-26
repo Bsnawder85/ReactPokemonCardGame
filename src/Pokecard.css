@@ -1,0 +1,152 @@
+.Pokecard {
+    background-color: transparent;
+    transition: 0.3s;
+    /* border-radius: 3px; */
+    /* card total width should be 150px
+      including the 5px border */
+    width: 150px;
+    /* max-width: 150px; */
+    height: 210px;
+    /* border:1px solid red; */
+    perspective: 1000px;
+    
+}
+.FlipCard {
+    border-radius: 3px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: 0.8s;
+    transform-style: preserve-3d;
+}
+
+.Pokecard:hover .FlipCard {
+    transform: rotateY(180deg);
+}
+
+/* Position the Front and Back Sides of the Card */
+.FlipCardFront, .FlipCardBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+/* Style the Front Side of the Card */
+.FlipCardFront {
+    background-color: white;
+    border-radius: 3px;
+    border: 2px solid rgb(153, 136, 136);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+/* Style the Back Side of the Card */
+.FlipCardBack {
+    background-color: slategrey;
+    border: 2px solid gray;
+    border-radius: 3px;
+    color: gold;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+}
+
+.PokemonName {
+    color: black;
+    /* border: 1px solid lightblue; */
+}
+/* .PokemonNumber {
+
+} */
+.PokemonImg {
+    width: 112px;
+    height: 112px;
+    border: 10px solid lightgray;
+    background-color: lightgray;
+
+}
+.Attributes {
+    /* border: 1px dashed purple; */
+    align-self: stretch;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.Attribute {
+    font-weight: bold;
+    font-size: 0.7rem;
+    border-radius: 5px;
+}
+.Type {
+    justify-self: flex-start;
+    align-self: center;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    width: 60px;
+    color: white;
+    background-color: darkgray;
+}
+.Exp {
+    border: 1px solid #adff2f;
+    padding: 1px 1px;
+    justify-self: flex-end;
+    align-self: center;
+    width: 55px;
+}
+
+
+
+
+/* 
+    Pokemon (Single) Type Colors 
+*/
+.Fire {
+    background-color: tomato;
+}
+.Water {
+    background-color: cornflowerblue;
+}
+.Poison {
+    background-color: blueviolet;
+}
+.Ground {
+    background-color: goldenrod;
+}
+.Rock {
+    background-color: darkgoldenrod;
+}
+.Electric {
+    background-color: gold;
+}
+.Bug {
+    background-color: darkolivegreen;
+}
+.Grass {
+    background-color: lawngreen;
+}
+.Psychic {
+    background-color: fuchsia;
+}
+.Ice {
+    background-color: aqua;
+}
+.Flying {
+    background-color: dodgerblue;
+}
+.Normal {
+    background-color: darkgray;
+}
+.Fighting {
+    background-color: chocolate;
+}

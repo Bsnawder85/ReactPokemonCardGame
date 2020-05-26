@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import React from 'react';
+import './Pokecard.css';
 
 class Pokecard extends Component {
     zeroPadPokemonId = function (id) {
