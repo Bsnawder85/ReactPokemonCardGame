@@ -37,5 +37,28 @@ class Pokecard extends Component {
     }
 }
 
+function updateTypeColor() {
+    let pokemon_collection = document.getElementsByClassName('Attribute Type');
+    for (let i=0; i < pokemon_collection.length; i++) {
+        switch(pokemon_collection[i].innerText) {
+            case 'Fire': pokemon_collection[i].className += ' Fire'; break;
+            case 'Water': pokemon_collection[i].className += ' Water'; break;
+            case 'Poison': pokemon_collection[i].className += ' Poison'; break; 
+            case 'Ground': pokemon_collection[i].className += ' Ground'; break; 
+            case 'Rock': pokemon_collection[i].className += ' Rock'; break; 
+            case 'Electric': pokemon_collection[i].className += ' Electric'; break; 
+            case 'Bug': pokemon_collection[i].className += ' Bug'; break; 
+            case 'Grass': pokemon_collection[i].className += ' Grass'; break; 
+            case 'Psychic': pokemon_collection[i].className += ' Psychic'; break; 
+            case 'Ice': pokemon_collection[i].className += ' Ice'; break; 
+            case 'Flying': pokemon_collection[i].className += ' Flying'; break; 
+            case 'Normal': pokemon_collection[i].className += ' Normal'; break; 
+            case 'Fighting': pokemon_collection[i].className += ' Fighting'; break; 
+            default: break;
+        }
+    }
+}
+
 
 export default Pokecard;
+export { updateTypeColor };
