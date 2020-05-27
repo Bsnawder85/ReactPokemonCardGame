@@ -21,7 +21,7 @@ class Pokecard extends Component {
                 <div className='FlipCard'>
                     <div className='FlipCardFront'>
                         <img className='PokemonImg' src={image_url} alt={name}/>
-                        <h5 className='PokemonName'>{name} #{pokemon_id}</h5>
+                        <h5 className='PokemonName'>{name}<br /> #{pokemon_id}</h5>
                         <div className='Attributes'>
                             <div id={pokemon_id} className='Attribute Type'>{type}</div>
                             <div className='Attribute Exp'>EXP: {base_exp}</div>
