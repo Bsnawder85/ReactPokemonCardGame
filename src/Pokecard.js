@@ -24,6 +24,9 @@ class Pokecard extends Component {
                         <h5 className='PokemonName'>{name}<br /> #{pokemon_id}</h5>
                         <div className='Attributes'>
                             <div id={pokemon_id} className='Attribute Type'>{type}</div>
+                            <span className='TypeIconWrapper'>
+                                <i className="TypeIcon"></i>
+                            </span>
                             <div className='Attribute Exp'>EXP: {base_exp}</div>
                         </div>
                     </div>
@@ -39,10 +42,18 @@ class Pokecard extends Component {
 
 function updateTypeColor() {
     let pokemon_collection = document.getElementsByClassName('Attribute Type');
+    let icons = document.getElementsByClassName('TypeIcon');
+    let wrappers = document.getElementsByClassName('TypeIconWrapper');
     for (let i=0; i < pokemon_collection.length; i++) {
         switch(pokemon_collection[i].innerText) {
-            case 'Fire': pokemon_collection[i].className += ' Fire'; break;
-            case 'Water': pokemon_collection[i].className += ' Water'; break;
+            case 'Fire': pokemon_collection[i].className += ' Fire'; 
+                icons[i].className += ' fas fa-fire'
+                wrappers[i].className += ' Fire-Icon'
+                break;
+            case 'Water': pokemon_collection[i].className += ' Water'; 
+                icons[i].className += ' fas fa-burn';
+                wrappers[i].className += ' Water-Icon'
+                break;
             case 'Poison': pokemon_collection[i].className += ' Poison'; break; 
             case 'Ground': pokemon_collection[i].className += ' Ground'; break; 
             case 'Rock': pokemon_collection[i].className += ' Rock'; break; 
@@ -54,7 +65,9 @@ function updateTypeColor() {
             case 'Flying': pokemon_collection[i].className += ' Flying'; break; 
             case 'Normal': pokemon_collection[i].className += ' Normal'; break; 
             case 'Fighting': pokemon_collection[i].className += ' Fighting'; break; 
-            default: break;
+            default: 
+                wrappers[i].innerText = pokemon_collection[i].innerText;
+            break;
         }
     }
 }
