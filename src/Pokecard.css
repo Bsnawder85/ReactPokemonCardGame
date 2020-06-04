@@ -110,16 +110,6 @@
     width: 55px;
 }
 
-.TypeIconWrapper {
-    text-align: center;
-    align-content: center;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-}
-
-
 
 /* 
     Pokemon (Single) Type Colors 
@@ -127,28 +117,8 @@
 .Fire {
     background-color: tomato;
 }
-.Fire-Icon {
-    color: orange;
-    background-color: rgba(255, 99, 71, 0.932);
-    box-shadow: 
-        1px /* offset-x */
-        2px /* offset-y */
-        5px /* blur-radius */
-        0 /* spread-radius */
-        rgba(255, 99, 71, 0.932);
-}
 .Water {
     background-color: cornflowerblue;
-}
-.Water-Icon {
-    color: lightblue;
-    background-color: cornflowerblue;
-    box-shadow: 
-        1px /* offset-x */
-        2px /* offset-y */
-        5px /* blur-radius */
-        0 /* spread-radius */
-        rgba(100, 149, 237, 0.932);
 }
 .Poison {
     background-color: blueviolet;
