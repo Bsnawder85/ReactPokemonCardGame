@@ -19,18 +19,32 @@ class Pokecard extends Component {
         return (
             <div className='Pokecard'>
                 <div className='FlipCard'>
-                    <div className='FlipCardFront'>
-                        <img className='PokemonImg' src={image_url} alt={name}/>
-                        <h5 className='PokemonName'>{name}<br /> #{pokemon_id}</h5>
-                        <div className='Attributes'>
-                            <div id={pokemon_id} className='Attribute Type'>{type}</div>
-                            <div className='Attribute Exp'>EXP: {base_exp}</div>
+
+                    <div className='FlipCardFront card border-warning'>
+                        <img className='PokemonImg card-img-top' src={image_url} alt={name}/>
+                        
+                        <div className='card-body'>
+                            <ul className='nav nav-pills justify-content-between align-items-start'>
+                                <li className='nav-item PokemonName'>{name}</li>
+                                <li className='nav-item PokemonName'>#{pokemon_id}</li>
+                            </ul>
+                        </div>
+                        <div className='card-footer'>
+                            <ul className='nav nav-pills justify-content-between'>
+                                <li id={pokemon_id} className='Attribute Type nav-item'>{type}</li>
+                                <li className='Attribute Exp nav-item'>EXP: {base_exp}</li>
+                            </ul>
                         </div>
                     </div>
-                    <div className='FlipCardBack'>
-                        <h2>POKEMON</h2>
-                        <h5>The Card Game</h5>
+
+
+                    <div className='FlipCardBack card border-info'>
+                        <div className='card-body'>
+                            <h5 className='card-title'>POKEMON</h5>
+                            <h6 className='card-subtitle'>The Card Game</h6>
+                        </div>
                     </div>
+
                 </div>
             </div>
         );
